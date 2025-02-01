@@ -1,0 +1,10 @@
+@import "font.css";
+@import "colors.css";
+@import "general_styles.css";
+@import "normalize.css";
+
+/* Componentes */
+  /* App */
+  @import "../routes/app/styles/bg_earth.css";
+  @import "../routes/app/styles/main.css";
+  @import "../routes/app/styles/search.css";

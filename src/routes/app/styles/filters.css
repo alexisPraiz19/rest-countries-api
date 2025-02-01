@@ -1,0 +1,108 @@
+.filters{
+    grid-area: Filters;
+
+    .sort-by-title, .region-title, .status-title{
+        font-size: .89em;
+        margin-bottom: 8px;
+    }
+
+    /* SortBy */
+    .sort-by{
+        .sort-by-container-select{
+            position: relative;
+            width: 100%; height: 40px;
+
+            .sort-by-select{
+                width: 100%; height: 100%;
+                padding-inline: 10px;
+                font-size: .9em;
+                color: currentColor;
+                background-color: transparent;
+                outline: 2px solid var(--soft-dark);
+                border-radius: 10px;
+                cursor: pointer;
+                &:active + svg{ top: 54% }
+
+                .sort-by-select_option{
+                    font-size: .99em;
+                    background-color: var(--soft-dark);
+                }
+
+                & + svg{
+                    position: absolute;
+                    top: 50%; right: 10px;
+                    translate: 0 -50%;
+                }
+            }
+        }
+    }
+
+    /* Region */
+    .region{
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 10px;
+        width: 88%;
+        margin-block: 28px;
+
+        .region-title{ min-width: 100% }
+        
+        .region-input-container{
+            padding: 10px;
+            font-size: .9em;
+            box-shadow: 0 0 2px 1px var(--soft-dark) inset;
+            border-radius: 10px;
+            cursor: pointer;
+
+            &:not(:last-child){ margin-bottom: 10px }
+
+            &:has(:checked){
+                background-color: var(--soft-dark);
+                box-shadow: none;
+            }
+
+            .region-input{ display: none }
+        }
+    }
+
+    /* Status */
+    .status{
+        .status-input-container{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            min-width: 100%;
+            font-size: .9em;
+            cursor: pointer;
+
+            &:first-of-type{ margin-bottom: 10px }
+
+            .status-input{
+                position: relative;
+                width: 22px; height: 22px;
+                box-shadow: 0 0 2px 1px var(--soft-gray) inset;
+                border-radius: 3px;
+                background-color: none;
+                appearance: none; 
+                -webkit-appearance: none; 
+                -moz-appearance: none;
+
+                &:checked::after{ display: block }
+
+                &::after{
+                    content: "✔";
+                    position: absolute;
+                    inset: 0;
+                    display: none;
+                    width: 100%; height: 100%;
+                    font-size: 1em;
+                    text-align: center;
+                    align-content: center;
+                    color: var(--soft-gray);
+                    background-color: #528ff9;
+                    border-radius: inherit;
+                }
+            }
+        }
+    }
+}

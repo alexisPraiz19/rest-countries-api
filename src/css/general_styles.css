@@ -1,0 +1,8 @@
+html{ scrollbar-width: thin }
+
+body{
+    color: var(--soft-gray);
+    font-size: 16px;
+    font-family: "BeVietnamPro SemiBold", system-ui, sans-serif;
+    background-color: var(--strong-dark);
+}

@@ -1,0 +1,30 @@
+.search{
+    grid-area: Search;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; height: 40px;
+
+    .search-title{ 
+        font-family: "BeVietnamPro Bold";
+        font-size: 1.1em; 
+    }
+
+    .search-input-container{
+        display: flex;
+        place-items: center;
+        gap: 9px;
+        width: 315px; height: 100%;
+        padding-inline: 8px;
+        background-color: var(--soft-dark);
+        border-radius: 10px;
+
+        .search-input{
+            width: 100%; height: 100%;
+            font-size: .875em;
+            color: var(--soft-gray);
+            background-color: transparent;
+            &::placeholder{ color: currentColor }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+.wrapper{
+    grid-area: ContentWrapper;
+    width: 100%; height: 100%;
+
+    /* Country Table */
+    .country-table{
+        width: 100%; height: 100%;
+
+        .country-table-thead{
+            width: 100%;
+            
+            .country-table-thead_tr{
+                display: flex;
+                width: 100%;
+                padding-right: 10px;
+                padding-bottom: 20px;
+                font-size: .9em;
+                border-bottom: 2px solid var(--soft-dark);
+
+                .country-table-thead_th{
+                    text-align: start;
+                    &:not(:first-child){ flex: 1 }
+                    &:first-child{ margin-right: 75px }
+                }
+            }
+        }
+
+        .country-table-tbody{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%; height: 446px;
+            margin-top: 15px;
+            overflow: hidden scroll;
+            scrollbar-width: thin;
+
+            .country-table-tbody_tr{
+                display: flex;
+                align-items: center;
+                height: max-content;
+                min-width: 100%;
+                font-family: "BeVietnamPro Medium";
+
+                .country-table-tbody_td{
+                    &:not(:first-child){ flex: 1 }
+                    &:first-child{ margin-right: 45px }
+                    
+                    .country-table-tbody_flag{
+                        width: 65px; 
+                        height: 45px;
+                        object-fit: fill;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

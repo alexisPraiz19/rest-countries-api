@@ -1,0 +1,19 @@
+@import "filters.css";
+@import "content_wrapper.css";
+
+.main{
+    display: grid;
+    grid-template-areas: 
+    "Search Search Search"
+    "Filters ContentWrapper ContentWrapper";
+    grid-template-columns: minmax(230px, 290px) 1fr;
+    gap: 30px 25px;
+    width: 95%; height: 600px;
+    max-width: 1440px;
+    margin-inline: auto;
+    padding: 18px 25px;
+    background-color: var(--strong-dark);
+    border-radius: 10px;
+    outline: 1.5px solid var(--soft-dark);
+    translate: 0 -60px;
+}

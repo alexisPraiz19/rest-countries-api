@@ -1,0 +1,23 @@
+@font-face {
+    src: url("/font/BeVietnamPro-SemiBold.woff");
+    font-family: "BeVietnamPro SemiBold";
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    src: url("/font/BeVietnamPro-Medium.woff");
+    font-family: "BeVietnamPro Medium";
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    src: url("/font/BeVietnamPro-Bold.woff");
+    font-family: "BeVietnamPro Bold";
+    font-weight: bolder;
+    font-style: normal;
+    font-display: swap;
+}
