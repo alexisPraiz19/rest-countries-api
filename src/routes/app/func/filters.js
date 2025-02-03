@@ -18,7 +18,3 @@ export function status(e, filters){
 
     return newFilters;
 }
-
-export function searchType(e, renderCountries){
-    console.log(renderCountries)
-}
