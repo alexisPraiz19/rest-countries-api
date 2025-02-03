@@ -13,7 +13,7 @@ export function useFilters(countries){
     if(filters.unMember && filters.independent) toRender = filteredRegion.filter(country => country.unMember && country.independent)
     else if(filters.unMember) toRender = filteredRegion.filter(country => country.unMember);
     else if(filters.independent) toRender = filteredRegion.filter(country => country.independent);
-    else toRender = filteredRegion;
+    else toRender = filteredRegion; 
     let finalrender;
 
     if(searchType != ""){
@@ -27,6 +27,18 @@ export function useFilters(countries){
            if(name.includes(value) || officialName.includes(value) || region.includes(value) || subregion.includes(value)) return i
         })
     }else finalrender = toRender;
+
+    if(filters.sortBy == "population"){
+        finalrender.sort((a,b) => b.population - a.population )
+    }
+    else if(filters.sortBy == "alphabet"){
+        finalrender.sort((a, b) => {
+            if (a.name.common < b.name.common) return -1;
+            if (a.name.common > b.common) return 1;
+            return 0;
+        });
+    }
+    else if(filters.sortBy == "area") finalrender.sort((a,b) => a.area - b.area )
 
     useEffect(()=>{
         setFinal(finalrender)
