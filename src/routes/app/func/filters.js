@@ -1,3 +1,4 @@
+// Estableciendo preferencias de filtrado por región
 export function region(e, filters){
     const newFilters = { ... filters  };
     const region     = newFilters.region;
@@ -9,6 +10,7 @@ export function region(e, filters){
     return newFilters;
 }
 
+// Estableciendo preferencias de filtrado por "estado del país"
 export function status(e, filters){
     const newFilters = { ... filters  };
     const isCheck    = e.target.checked;
@@ -17,8 +19,4 @@ export function status(e, filters){
     else newFilters["independent"] = isCheck;
 
     return newFilters;
-}
-
-export function searchType(e, renderCountries){
-    console.log(renderCountries)
 }
