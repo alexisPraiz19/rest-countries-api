@@ -1,4 +1,4 @@
-import { RegionFilterOptions } from "./toFilters"// Componente de complemetación
+import { RegionFilterOptions } from "./contextConsumer/toFilters"// Componente de complemetación
 import { region } from "../../func/filters"// Función de filtrado por región
 
 export default function Region(){

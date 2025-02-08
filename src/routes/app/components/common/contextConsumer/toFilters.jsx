@@ -1,7 +1,7 @@
 /---/
 import { use } from "react"
-import { FilterContext } from "../../../../context/FiltersContext"
-import CheckboxOption from "./CheckboxOption"
+import { FilterContext } from "../../../../../context/FiltersContext"
+import CheckboxOption from "../CheckboxOption"
 /---/
 
 // Componente con optiones de orneamiento

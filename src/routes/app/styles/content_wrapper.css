@@ -50,6 +50,7 @@
                         height: 45px;
                         object-fit: fill;
                         border-radius: 5px;
+                        aspect-ratio: 320/213;
                     }
                 }
             }

@@ -1,4 +1,4 @@
-import { StatusFilterOption } from "./toFilters"// Componente de complementación
+import { StatusFilterOption } from "./contextConsumer/toFilters"// Componente de complementación
 import { status } from "../../func/filters"// Función para filtrado por "estado del país"
 
 export default function Status(){

@@ -1,5 +1,5 @@
 import { createContext } from "react"// Herramienta React
-import { useGetCountries } from "./useGetCountries"// Custom Hook
+import { useGetCountries } from "./hook/useGetCountries"// Custom Hook
 
 // Creación del contexto
 export const DataCountries = createContext({});
