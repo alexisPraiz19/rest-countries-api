@@ -1,6 +1,6 @@
 // Componentes de complementación
 import { IconSearch } from "../../../assets/Icons"
-import { SearchTitle, InputSearch } from "./common/toSearch"
+import { SearchTitle, InputSearch } from "./common/contextConsumer/toSearch"
 
 export default function Search(){
     return(
