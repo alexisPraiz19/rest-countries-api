@@ -1,9 +1,12 @@
+/---/
 // Componentes de complementación
 import Search from "./Search"
 import Filters from "./Filters"
 import ContentWrapper from "./ContentWrapper"
 
+// Contexto de filtros
 import FilterContextProvider from "../../../context/FiltersContext"
+/---/
 
 export default function Main(){
     return(

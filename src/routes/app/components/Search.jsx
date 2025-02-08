@@ -1,19 +1,15 @@
-/---/
-import { use } from "react"
+// Componentes de complementación
 import { IconSearch } from "../../../assets/Icons"
-import { FilterContext } from "../../../context/FiltersContext"
-/---/
+import { SearchTitle, InputSearch } from "./common/contextConsumer/toSearch"
 
 export default function Search(){
-    const { matches, setSearchType } = use(FilterContext);
-
     return(
         <div className="search">
-            <h2 className="search-title">Found { matches } countries</h2>
+            <SearchTitle/>
 
             <label className="search-input-container">
                 <IconSearch/>
-                <input type="search" name="search-by-type" className="search-input" placeholder="Search by Name, Region, Subregion" onChange={(e) => setSearchType(e.target.value)}/>
+                <InputSearch/>
             </label>
         </div>
     )
