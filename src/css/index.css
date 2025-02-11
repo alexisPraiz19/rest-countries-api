@@ -8,3 +8,6 @@
   @import "../routes/app/styles/bg_earth.css";
   @import "../routes/app/styles/main.css";
   @import "../routes/app/styles/search.css";
+
+  /* Details Page */
+  @import "../routes/details/styles/details.css";

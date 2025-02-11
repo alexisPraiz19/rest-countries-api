@@ -35,6 +35,7 @@
             scrollbar-width: thin;
 
             .country-table-tbody_tr{
+                position: relative;
                 display: flex;
                 align-items: center;
                 height: max-content;
@@ -50,7 +51,21 @@
                         height: 45px;
                         object-fit: fill;
                         border-radius: 5px;
-                        aspect-ratio: 320/213;
+                    }
+                }
+
+                /* enlace a los detalles del país */
+                .country-table-tbody_td--navlink{
+                    position: absolute;
+                    left: 0;
+                    width: 100%; height: 100%;
+
+                    a{
+                        display: inline-block;
+                        width: 100%; height: 100%;
+                        background-color: #282B30;
+                        opacity: 0;
+                        &:hover{ opacity: .2 }
                     }
                 }
             }

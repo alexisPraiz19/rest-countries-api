@@ -8,6 +8,7 @@ import DataCountriesProvider from "./context/DataCountries"
 
 // Componentes de complementación
 import App from "./routes/app/App"
+import DetailsPage from "./routes/details/DetailsPage"
 import ErrorPath from "./routes/ErrorPath"
 
 // Estilos
@@ -16,13 +17,15 @@ import "./css/index.css"
 const root = createRoot(document.getElementById("app"));
 
 root.render(
+    <StrictMode>
         <BrowserRouter>
             <DataCountriesProvider>
                 <Routes>
                     <Route path="*" element={<ErrorPath/>} />
                     <Route index path="/" element={ <App/> } errorElement={<Error/>} />
-                    <Route path="details" element={<h1>Renderizado detalles</h1>} />
+                    <Route path="details/:countryName" element={<DetailsPage/>} />
                 </Routes>
             </DataCountriesProvider>
         </BrowserRouter>
+    </StrictMode>
 )

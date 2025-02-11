@@ -1,4 +1,4 @@
-import { Logo } from "../../../assets/Icons"
+import { Logo } from "./Icons"
 
 export default function BgEarth(){
     return(
