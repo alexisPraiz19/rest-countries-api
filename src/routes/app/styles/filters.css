@@ -106,3 +106,14 @@
         }
     }
 }
+
+@media (max-width: 1023px){
+    .filters .region{ width: 100% }
+}
+
+@media (width <= 965px){
+    .filters .region{
+        gap: 10px;
+        .region-input-container{ margin-bottom: 0 !important; }
+    }
+}

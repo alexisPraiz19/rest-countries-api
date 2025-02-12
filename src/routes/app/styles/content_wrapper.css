@@ -72,3 +72,43 @@
         }
     }
 }
+
+@media (width <= 1023px){
+    .wrapper{
+        /* Ocultando última columna de la tabla */
+        .country-table{
+            .country-table-thead .country-table-thead_tr .country-table-thead_th:last-child{
+                display: none;
+            }
+
+            .country-table-tbody .country-table-tbody_tr .country-table-tbody_td:nth-child(5){
+                display: none;
+            }
+        }
+    }
+}
+
+@media (width <= 965px){
+    .wrapper .country-table .country-table-thead .country-table-thead_tr{ padding-right: 0 }
+}
+
+@media (width <= 450px){
+    .wrapper{
+        /* Ocultando ante-última columna de la tabla */
+        .country-table{
+            .country-table-thead .country-table-thead_tr .country-table-thead_th{
+                &:first-child{ margin-right: 0; flex: 1; }
+                &:nth-child(4){ display: none }
+            }
+
+            .country-table-tbody{
+                height: 355px;
+
+                .country-table-tbody_tr .country-table-tbody_td{
+                    &:first-child{ margin-right: 0; flex: 1; }
+                    &:nth-child(4){ display: none }
+                }
+            }
+        }
+    }
+}

@@ -136,3 +136,99 @@
         }
     }
 }
+
+@media (width <= 900px){
+    .details-wrapper{
+        width: 70%;
+        transform: translateY(-50px);
+        
+        /* Encabezado */
+        .details-header{
+            .details-header_figure{
+                .details-header_flagImage{ width: 200px }
+                
+                .details-header_figcaption{ font-size: 1.3em }
+            }
+
+            .details-header_countryInfo .details-header_infoContainer .details-header_bar{ margin-inline: 3px }
+        }
+
+        /* Contenido principal: información del país */
+        .details-main .details-main_list .details-main_listItem{ padding: 12px 15px }
+        
+        /* Footer: Paises vecinos */
+        .details-footer{
+            .details-footer_title{ font-size: .8em }
+
+            .details-footer_list .details-footer_listItem .details-footer_figure .details-footer_link{
+                font-size: .8em;
+                .details-footer_flagImage{ height: 48px }
+            }
+
+            .go-back{
+                width: 80px;
+                padding-block: 7px;
+                font-size: .7em;
+            }
+        }
+    }
+}
+
+@media (width <= 650px){
+    .header svg{scale: .9}
+
+    .details-wrapper{
+        width: 100%;
+        border-radius: 0;
+        transform: translateY(-40px);
+        
+        /* Encabezado */
+        .details-header{
+            .details-header_figure{
+                .details-header_flagImage{ width: 170px }
+                
+                .details-header_figcaption{ font-size: 1.2em }
+            }
+
+            .details-header_countryInfo .details-header_infoContainer .details-header_bar{ margin-inline: 2px }
+        }
+
+        /* Contenido principal: información del país */
+        .details-main .details-main_list .details-main_listItem{ padding: 10px 12px }
+        
+        /* Footer: Paises vecinos */
+        .details-footer{
+            .details-footer_title{ font-size: .7em }
+
+            .details-footer_list .details-footer_listItem .details-footer_figure .details-footer_link{
+                font-size: .7em;
+                .details-footer_flagImage{ height: 42px }
+            }
+        }
+    }
+}
+
+@media (width <= 480px){
+    /* Encabezado */
+    .details-wrapper .details-header .details-header_countryInfo{
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .details-header_infoContainer{
+            display: flex;
+            width: 88%;
+            font-size: .88em;
+
+            span{
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (width <= 330px){
+    /* Encabezado */
+    .details-wrapper .details-header .details-header_countryInfo .details-header_infoContainer{ width: 90% }
+}

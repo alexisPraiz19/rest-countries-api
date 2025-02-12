@@ -6,7 +6,7 @@
     grid-template-areas: 
     "Search Search Search"
     "Filters ContentWrapper ContentWrapper";
-    grid-template-columns: minmax(230px, 290px) 1fr;
+    grid-template-columns: minmax(210px, 290px) minmax(610px, 1fr);
     gap: 30px 25px;
     width: 95%; height: 600px;
     max-width: 1440px;
@@ -16,4 +16,22 @@
     border-radius: 10px;
     outline: 1.5px solid var(--soft-dark);
     translate: 0 -60px;
+}
+
+@media (width <= 965px){
+    .main{
+        grid-template-areas: 
+        "Search"
+        "Filters"
+        "ContentWrapper";
+        grid-template-columns: 1fr;
+        grid-auto-rows: max-content;
+        height: 920px;
+    }
+}
+
+@media (width <= 600px){
+    .main{
+        padding-inline: 10px;
+    }
 }
