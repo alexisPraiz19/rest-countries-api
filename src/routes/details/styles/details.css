@@ -1,0 +1,234 @@
+.details-wrapper{
+    width: 55%; height: auto;
+    max-width: 750px;
+    margin-inline: auto;
+    background-color: var(--strong-dark);
+    outline: 1.5px solid var(--soft-dark);
+    border-radius: 10px;
+    transform: translateY(-60px);
+
+    /* Encabezado */
+    .details-header{
+        display: grid;
+        justify-content: center;
+        margin-bottom: 20px;
+        font-family: "BeVietnamPro Medium";
+
+        .details-header_figure{
+            text-align: center;
+            translate: 0 -42px;
+
+            .details-header_flagImage{
+                width: 260px; height: auto;
+                border-radius: 10px;
+            }
+
+            .details-header_figcaption{
+                margin-top: 12px;
+                font-family: "BeVietnamPro SemiBold";
+                font-size: 1.6em;
+                line-height: 1.3;
+
+                .details-header_officialName{
+                    display: block;
+                    font-family: "BeVietnamPro Medium";
+                    font-size: .6em;
+                }
+            }
+        }
+
+        .details-header_countryInfo{
+            display: flex;
+            gap: 20px;
+            font-size: .9em;
+            translate: 0 -18px;
+
+            .details-header_infoContainer{
+                padding: 12px;
+                background-color: var(--soft-dark);
+                border-radius: 10px;
+               
+                .details-header_bar{
+                    display: inline-block;
+                    margin-inline: 5px;
+                    color: #1B1D1F88;
+                    transform: scaleY(1.5);
+                }
+            }
+        }
+    }
+
+    /* Contenido principal: información del país */
+    .details-main{
+        width: 100%; height: auto;
+        margin-bottom: 20px;
+        font-size: .93em;
+
+        .details-main_list{
+            list-style: none;
+
+            .details-main_listItem{
+                display: flex;
+                justify-content: space-between;
+                padding: 15px 18px;
+                border-top: 1.5px solid var(--soft-dark);
+                &:last-child{ border-bottom: 1.5px solid var(--soft-dark) }
+
+                span:first-child{ font-family: "BeVietnamPro Medium" }
+            }
+        }
+    }
+
+    /* Footer: Paises vecinos */
+    .details-footer{
+        display: grid;
+        padding-inline: 15px;
+
+        .details-footer_title{ 
+            margin-bottom: 20px;
+            font-size: .9em; 
+        }
+
+        .details-footer_list{
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            list-style: none;
+
+            .details-footer_listItem{
+                .details-footer_figure{
+                    max-width: 76px;
+
+                    .details-footer_link{
+                        text-decoration: none;
+                        font-size: .9em;
+                        color: var(--soft-gray);
+                        text-align: center;
+                        line-height: 1.5;
+                        text-wrap: wrap;
+
+                        .details-footer_flagImage{
+                            width: 100%; height: 54px;
+                            border-radius: 8px;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+
+        .go-back{
+            justify-self: end;
+            display: inline-block;
+            width: 100px;
+            margin-bottom: 22px;
+            padding-block: 8px;
+            font-family: "BeVietnamPro Medium";
+            font-size: .8em;
+            color: var(--soft-gray);
+            text-align: center;
+            text-decoration: none;
+            background-color: var(--soft-dark);
+            border-radius: 8px;
+
+            &:hover{ opacity: .9 }
+        }
+    }
+}
+
+@media (width <= 900px){
+    .details-wrapper{
+        width: 70%;
+        transform: translateY(-50px);
+        
+        /* Encabezado */
+        .details-header{
+            .details-header_figure{
+                .details-header_flagImage{ width: 200px }
+                
+                .details-header_figcaption{ font-size: 1.3em }
+            }
+
+            .details-header_countryInfo .details-header_infoContainer .details-header_bar{ margin-inline: 3px }
+        }
+
+        /* Contenido principal: información del país */
+        .details-main .details-main_list .details-main_listItem{ padding: 12px 15px }
+        
+        /* Footer: Paises vecinos */
+        .details-footer{
+            .details-footer_title{ font-size: .8em }
+
+            .details-footer_list .details-footer_listItem .details-footer_figure .details-footer_link{
+                font-size: .8em;
+                .details-footer_flagImage{ height: 48px }
+            }
+
+            .go-back{
+                width: 80px;
+                padding-block: 7px;
+                font-size: .7em;
+            }
+        }
+    }
+}
+
+@media (width <= 650px){
+    .header svg{scale: .9}
+
+    .details-wrapper{
+        width: 100%;
+        border-radius: 0;
+        transform: translateY(-40px);
+        
+        /* Encabezado */
+        .details-header{
+            .details-header_figure{
+                .details-header_flagImage{ width: 170px }
+                
+                .details-header_figcaption{ font-size: 1.2em }
+            }
+
+            .details-header_countryInfo .details-header_infoContainer .details-header_bar{ margin-inline: 2px }
+        }
+
+        /* Contenido principal: información del país */
+        .details-main .details-main_list .details-main_listItem{ padding: 10px 12px }
+        
+        /* Footer: Paises vecinos */
+        .details-footer{
+            .details-footer_title{ font-size: .7em }
+
+            .details-footer_list .details-footer_listItem .details-footer_figure .details-footer_link{
+                font-size: .7em;
+                .details-footer_flagImage{ height: 42px }
+            }
+        }
+    }
+}
+
+@media (width <= 480px){
+    /* Encabezado */
+    .details-wrapper .details-header .details-header_countryInfo{
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .details-header_infoContainer{
+            display: flex;
+            width: 88%;
+            font-size: .88em;
+
+            span{
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (width <= 330px){
+    /* Encabezado */
+    .details-wrapper .details-header .details-header_countryInfo .details-header_infoContainer{ width: 90% }
+}

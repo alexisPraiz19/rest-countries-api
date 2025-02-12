@@ -1,3 +1,4 @@
+import { NavLink } from "react-router";
 import { useFilters } from "../../../../context/hook/useFilters"
 import NotFoundCountries from "./NotFoundCountires";
 
@@ -14,9 +15,10 @@ export default function TableItem({ countries }){
                             <img src={flags.png} alt={flag} className="country-table-tbody_flag"/>
                         </td>
                         <td className="country-table-tbody_td">{ name.common }</td>
-                        <td className="country-table-tbody_td">{ population }</td>
-                        <td className="country-table-tbody_td">{ area }</td>
+                        <td className="country-table-tbody_td">{ population.toLocaleString() }</td>
+                        <td className="country-table-tbody_td">{ area.toLocaleString() }</td>
                         <td className="country-table-tbody_td">{ region }</td>
+                        <td className="country-table-tbody_td--navlink"><NavLink to={`/details/${name.common}`} title={`go to detail of ${name.common}`} /></td>
                     </tr>
                 )
             )

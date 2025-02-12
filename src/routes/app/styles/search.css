@@ -28,3 +28,16 @@
         }
     }
 }
+
+@media (width <= 965px){
+    .search{
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+        height: 90px;
+
+        .search-input-container{
+            width: 100%;
+        }
+    }
+}
