@@ -18,6 +18,7 @@
         padding-inline: 8px;
         background-color: var(--soft-dark);
         border-radius: 10px;
+        &:has(:focus){ outline: 1px solid var(--soft-gray) }
 
         .search-input{
             width: 100%; height: 100%;
