@@ -9,7 +9,7 @@ export function SortBySelect(){
     const { setFilters } = use(FilterContext);
 
     return(
-        <select className="sort-by-select" name="sort-by-select" onChange={(e) => { setFilters(prev => ({... prev, sortBy: e.target.value})) }}>
+        <select className="sort-by-select" name="sort-by-select" title="sort by preference" onChange={(e) => { setFilters(prev => ({... prev, sortBy: e.target.value})) }}>
             <option value = "population" className="sort-by-select_option">Population</option>
             <option value = "alphabet" className="sort-by-select_option">Alphabet</option>
             <option value = "area" className="sort-by-select_option">Area</option>
