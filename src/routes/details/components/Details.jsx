@@ -11,6 +11,7 @@ import Footer from "./Footer"
 
 export default function Details({ match, countries }){
     const countryInfo = match[0];
+
     return(
         <>
             <BgEarth/>

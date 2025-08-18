@@ -2,9 +2,9 @@ import { NavLink } from "react-router"
 
 export default function ErrorPath(){
     return(
-        <>
-            <h1>Path invalido</h1>
-            <NavLink to="/">Regrese</NavLink>
-        </>
+        <div className="errorPath">
+            <h1>Country not found or <span>error</span> in the URL</h1>
+            <NavLink to="/">Go Back</NavLink>
+        </div>
     )
 }
